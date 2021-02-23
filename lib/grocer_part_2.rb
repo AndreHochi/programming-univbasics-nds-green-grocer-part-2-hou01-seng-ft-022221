@@ -4,10 +4,16 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  
 end
 
 def apply_clearance(cart)
-  cart.each 
+  cart.each do |item_properties|
+    if item_properties[:clearance] == TRUE
+      item_properties[:price] = (item_properties[:price] * .8).round(2)
+    end
+  end
+  cart
 end
 
 def checkout(cart, coupons)
@@ -22,4 +28,6 @@ def checkout(cart, coupons)
   # some irritated customers
   
   consolidated_cart = consolidate_cart(cart)
+  couponed_cart = apply_coupons(consolidated_cart, coupons)
+  final_checkout = apply_clearance(couponed_cart)
 end
