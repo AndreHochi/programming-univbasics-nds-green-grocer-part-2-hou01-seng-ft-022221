@@ -20,7 +20,6 @@ def apply_coupons(cart, coupons)
           modified_coupon[:count] = coupon_properties[:num]
           push_later.push(modified_coupon)
           item_properties[:count] = item_properties[:count] - coupon_properties[:num]
-          binding.pry
         end
       end
     end
@@ -29,6 +28,8 @@ def apply_coupons(cart, coupons)
     cart.push(item)
   end
   cart
+  binding.pry
+
 end
 
 def apply_clearance(cart)
