@@ -1,3 +1,5 @@
+require 'pry'
+
 require_relative './part_1_solution.rb'
 
 def apply_coupons(cart, coupons)
@@ -16,6 +18,7 @@ def apply_coupons(cart, coupons)
           modified_coupon[:count] = coupon_properties[:num]
           push_later.push(modified_coupon)
           item_properties[:count] = item_properties[:count] - coupon_properties[:num]
+          binding.pry
         end
       end
     end
