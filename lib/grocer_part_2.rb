@@ -7,9 +7,7 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This method **should** update cart
+  cart.each 
 end
 
 def checkout(cart, coupons)
@@ -22,4 +20,6 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
+  
+  consolidated_cart = consolidate_cart(cart)
 end
