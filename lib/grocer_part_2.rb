@@ -4,10 +4,13 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  modified_coupon = {}
   cart.each do |item_properties|
     coupon.each do |coupon_properties|
       if item_properties[:name] == coupon_properties[:name]
-        
+        modified_coupon = coupon_properties
+        modified_coupon[:name] = modified_coupon[:name] + ""
+        cart.push()
     end
   end
 end
