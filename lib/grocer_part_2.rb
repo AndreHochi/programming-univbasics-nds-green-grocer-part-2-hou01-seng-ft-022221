@@ -20,7 +20,9 @@ def apply_coupons(cart, coupons)
       end
     end
   end
-  cart.push()
+  push_later.each do |item|
+    cart.push(item)
+  end
 end
 
 def apply_clearance(cart)
