@@ -6,7 +6,7 @@ def apply_coupons(cart, coupons)
   # REMEMBER: This method **should** update cart
   push_later = []
   cart.each do |item_properties|
-    coupon.each do |coupon_properties|
+    coupons.each do |coupon_properties|
       if item_properties[:name] == coupon_properties[:name]
         if item_properties[:count] > coupon_properties[:num]
           modified_coupon = {}
