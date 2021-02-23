@@ -7,14 +7,13 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   push_later = []
-  binding.pry
 
   cart.each do |item_properties|
     coupons.each do |coupon_properties|
-      if item_properties[:name] == coupon_properties[:name]
+      if item_properties[:item] == coupon_properties[:item]
         if item_properties[:count] > coupon_properties[:num]
           modified_coupon = {}
-          modified_coupon[:name] = coupon_properties[:name] + " W/COUPON"
+          modified_coupon[:item] = coupon_properties[:item] + " W/COUPON"
           modified_coupon[:price] = coupon_properties[:cost] / coupon_properties[:num]
           modified_coupon[:clearance] = item_properties[:clearance]
           modified_coupon[:count] = coupon_properties[:num]
