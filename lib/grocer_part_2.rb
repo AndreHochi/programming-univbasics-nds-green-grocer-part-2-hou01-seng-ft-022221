@@ -12,6 +12,7 @@ def apply_coupons(cart, coupons)
     coupons.each do |coupon_properties|
       if item_properties[:item] == coupon_properties[:item]
         if item_properties[:count] > coupon_properties[:num]
+          testing = item_properties
           modified_coupon = {}
           modified_coupon[:item] = coupon_properties[:item] + " W/COUPON"
           modified_coupon[:price] = coupon_properties[:cost] / coupon_properties[:num]
