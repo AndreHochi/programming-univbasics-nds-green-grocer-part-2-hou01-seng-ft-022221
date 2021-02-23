@@ -23,6 +23,7 @@ def apply_coupons(cart, coupons)
   push_later.each do |item|
     cart.push(item)
   end
+  cart
 end
 
 def apply_clearance(cart)
