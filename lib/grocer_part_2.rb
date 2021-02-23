@@ -7,6 +7,8 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   push_later = []
+  binding.pry
+
   cart.each do |item_properties|
     coupons.each do |coupon_properties|
       if item_properties[:name] == coupon_properties[:name]
