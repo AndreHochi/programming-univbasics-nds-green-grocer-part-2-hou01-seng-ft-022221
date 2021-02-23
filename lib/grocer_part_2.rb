@@ -28,7 +28,7 @@ end
 def apply_clearance(cart)
   cart.each do |item_properties|
     if item_properties[:clearance] == TRUE
-      item_properties[:price] = (item_properties[:price] * .8).round(2)
+      item_properties[:price] = ((item_properties[:price] / 5)*4).round(2)
     end
   end
   cart
